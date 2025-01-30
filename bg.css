@@ -1,0 +1,13 @@
+* {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: wheat; */
+    background-color: white;
+    background-image: radial-gradient(#777 1px, transparent 1px);
+    background-size: 30px 30px;
+}
