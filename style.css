@@ -180,6 +180,7 @@ input[type='checkbox']:checked+.switch::before {
     align-items: center;
     border-radius: 4px;
     box-shadow: 4px 4px var(--shadow-color);
+    background: black;
 }
 
 .image-frame img {
