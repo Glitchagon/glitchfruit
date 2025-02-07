@@ -12,9 +12,10 @@
   </head>
   <body class="altmode">
     <div class="container">
-      <button class="primary-color">glitchagon</button>
-      <button class="base-color">glitchagon</button>
-      <button class="secondary-color">glitchagon</button>
+      <button class="primary-color shadow">primary color</button>
+      <button class="base-color shadow">base color</button>
+      <button class="secondary-color shadow">secondary color</button>
+      <button class="primary-color">no shadow declared</button>
 
       <br />
 
@@ -22,22 +23,18 @@
 
       <br />
 
-      <div class="form">
-        <h2>Create project</h2>
-        <p>Deploy your new project in one click.</p>
-        <label for="project-name">Name</label>
-        <input
-          class="recess-shadow"
-          type="text"
-          placeholder="Type your project name here..."
-        />
-        <label for="project-framework">Framework</label>
-        <select class="recess-shadow" id="framework" name="framework">
+      <div class="form primary-color shadow">
+        <h2>Fruit Selector</h2>
+        <p>Choose the fruit of your liking.</p>
+        <label for="name">Username</label>
+        <input class="" type="text" placeholder="Type your username here..." />
+        <label for="fruit">Fruit</label>
+        <select class="" id="fruit" name="fruit">
           <option value="none" selected>None</option>
-          <option value="Vue">Vue</option>
-          <option value="Vite">Vite</option>
-          <option value="React">React</option>
-          <option value="glitch">glitch</option>
+          <option value="Vue">Apple</option>
+          <option value="Vite">Kiwi</option>
+          <option value="React">Pineapple</option>
+          <option value="glitch">Banana</option>
         </select>
         <div class="button-container">
           <button class="primary-color" type="button">Cancel</button>
@@ -47,20 +44,18 @@
 
       <br />
 
-      <input type="checkbox" id="check" class="recess-shadow" />
+      <input type="checkbox" id="check" class="" />
       <label for="check" class="switch"></label>
 
       <br />
 
-      <div class="image-border">
-        <div class="image-frame" onclick="toggleSize(this)">
-          <img src="images/image.png" alt="" />
-        </div>
+      <div class="image-frame recess-shadow shadow" onclick="toggleSize(this)">
+        <img src="images/image.png" alt="" />
       </div>
 
       <br />
 
-      <button class="secondary-color" id="theme-switch">
+      <button class="shadow" id="theme-switch">
         <i class="bx bx-lemon"></i>
         &#8203;
         <i class="bx bxs-lemon"></i>
