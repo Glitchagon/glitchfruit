@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -87,7 +86,6 @@ button {
   margin: 16px 0;
   position: relative;
 }
-
 button:hover {
   cursor: pointer;
 }
@@ -96,32 +94,47 @@ button.shadow {
   box-shadow: 4px 4px var(--shadow-color);
   transition: transform 50ms, box-shadow 50ms;
 }
-
 button.shadow:hover {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px var(--shadow-color);
   cursor: pointer;
 }
-
 button.shadow:active {
   transform: translate(4px, 4px);
   box-shadow: 0px 0px var(--shadow-color);
 }
 
 button.primary-color,
-.form.primary-color {
+.form.primary-color,
+.tooltip span.primary-color {
   background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.tooltip span.primary-color::before {
+  border-color: var(--primary-color) transparent transparent transparent;
 }
 
 button.base-color,
-.form.base-color {
+.form.base-color,
+.tooltip span.base-color {
   background-color: var(--base-color);
+  color: var(--text-color);
+}
+
+.tooltip span.base-color::before {
+  border-color: var(--base-color) transparent transparent transparent;
 }
 
 button.secondary-color,
-.form.secondary-color {
+.form.secondary-color,
+.tooltip span.secondary-color {
   background-color: var(--secondary-color);
   color: var(--base-color);
+}
+
+.tooltip span.secondary-color::before {
+  border-color: var(--secondary-color) transparent transparent transparent;
 }
 
 .form {
@@ -190,11 +203,11 @@ input[type=checkbox] {
   display: none;
 }
 
-input[type=checkbox]:checked+.switch {
+input[type=checkbox]:checked + .switch {
   background-color: var(--primary-color);
 }
 
-input[type=checkbox]:checked+.switch::before {
+input[type=checkbox]:checked + .switch::before {
   transform: translateX(25px);
 }
 
@@ -211,7 +224,6 @@ input[type=checkbox]:checked+.switch::before {
   background: black;
   position: relative;
 }
-
 .image-frame::before {
   content: "";
   position: absolute;
@@ -231,7 +243,7 @@ input[type=checkbox]:checked+.switch::before {
 .image-frame img {
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 #theme-switch {
@@ -260,4 +272,39 @@ input[type=checkbox]:checked+.switch::before {
   display: block;
 }
 
-/*# sourceMappingURL=style.css.map */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip:hover span {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip span {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  width: 140px;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -70px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tooltip span::before {
+  content: "";
+  border: 5px solid;
+  border-color: black transparent transparent transparent;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+}/*# sourceMappingURL=style.css.map */
