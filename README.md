@@ -1,3 +1,9 @@
+**glitchfruit** is a collection of *fruit-themed UI* files, merging vibrant splashes of color with a modern neobrutalism style.
+
+Many different types of files are available for different frameworks and stacks, such as CSS/JS, SCSS/TS, and others. Just download and insert the files you need, then add a class to a div element - and **glitchfruit** will handle the rest. 
+
+Also packaged is a template collection, guide, and special buttons (like a fruit-themed GitHub button) to make sure you're all set to *splash* your website!
+
 # List of Contributors
 
 *glitchfruit*
