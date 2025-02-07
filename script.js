@@ -16,3 +16,7 @@ themeSwitch.addEventListener("click", () => {
   altmode = localStorage.getItem("altmode");
   altmode !== "active" ? enableAltMode() : disableAltMode();
 });
+
+function toggleSize(element) {
+  element.classList.toggle("expanded");
+}
