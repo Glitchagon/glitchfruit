@@ -18,7 +18,7 @@
 
       <br />
 
-      <input type="text" placeholder="glitching..." />
+      <input class="recess-shadow" type="text" placeholder="glitching..." />
 
       <br />
 
@@ -26,9 +26,13 @@
         <h2>Create project</h2>
         <p>Deploy your new project in one click.</p>
         <label for="project-name">Name</label>
-        <input type="text" placeholder="Type your project name here..." />
+        <input
+          class="recess-shadow"
+          type="text"
+          placeholder="Type your project name here..."
+        />
         <label for="project-framework">Framework</label>
-        <select id="framework" name="framework">
+        <select class="recess-shadow" id="framework" name="framework">
           <option value="none" selected>None</option>
           <option value="Vue">Vue</option>
           <option value="Vite">Vite</option>
@@ -43,13 +47,13 @@
 
       <br />
 
-      <input type="checkbox" id="check" />
+      <input type="checkbox" id="check" class="recess-shadow" />
       <label for="check" class="switch"></label>
 
       <br />
 
       <div class="image-border">
-        <div class="image-frame">
+        <div class="image-frame" onclick="toggleSize(this)">
           <img src="images/image.png" alt="" />
         </div>
       </div>
