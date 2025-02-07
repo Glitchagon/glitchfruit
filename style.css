@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -83,39 +84,53 @@ button {
   padding: 12px 18px;
   border-radius: 4px;
   border: solid 2px var(--shadow-color);
-  box-shadow: 4px 4px var(--shadow-color);
-  transition: transform 50ms, box-shadow 50ms;
   margin: 16px 0;
   position: relative;
 }
+
 button:hover {
+  cursor: pointer;
+}
+
+button.shadow {
+  box-shadow: 4px 4px var(--shadow-color);
+  transition: transform 50ms, box-shadow 50ms;
+}
+
+button.shadow:hover {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px var(--shadow-color);
   cursor: pointer;
 }
-button:active {
+
+button.shadow:active {
   transform: translate(4px, 4px);
   box-shadow: 0px 0px var(--shadow-color);
 }
 
-button.primary-color {
+button.primary-color,
+.form.primary-color {
   background-color: var(--primary-color);
 }
 
-button.base-color {
+button.base-color,
+.form.base-color {
   background-color: var(--base-color);
 }
 
-button.secondary-color {
+button.secondary-color,
+.form.secondary-color {
   background-color: var(--secondary-color);
   color: var(--base-color);
 }
 
 .form {
   border: 2px solid var(--shadow-color);
-  background-color: var(--primary-color);
   padding: 20px;
   border-radius: 4px;
+}
+
+.form.shadow {
   box-shadow: 4px 4px 0px 0px var(--shadow-color);
 }
 
@@ -175,11 +190,11 @@ input[type=checkbox] {
   display: none;
 }
 
-input[type=checkbox]:checked + .switch {
+input[type=checkbox]:checked+.switch {
   background-color: var(--primary-color);
 }
 
-input[type=checkbox]:checked + .switch::before {
+input[type=checkbox]:checked+.switch::before {
   transform: translateX(25px);
 }
 
@@ -193,23 +208,30 @@ input[type=checkbox]:checked + .switch::before {
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  box-shadow: 4px 4px var(--shadow-color);
   background: black;
   position: relative;
 }
+
 .image-frame::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  box-shadow: inset 1px 1px 3px var(--shadow-color);
   z-index: 2;
+}
+
+.image-frame.shadow {
+  box-shadow: 4px 4px var(--shadow-color);
+}
+
+.image-frame.recess-shadow::before {
+  box-shadow: inset 1px 1px 3px var(--shadow-color);
 }
 
 .image-frame img {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 #theme-switch {
@@ -236,4 +258,6 @@ input[type=checkbox]:checked + .switch::before {
 
 .altmode #theme-switch i:last-child {
   display: block;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
